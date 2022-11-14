@@ -2,6 +2,6 @@ FROM openjdk:8-jdk-alpine
 
 ARG JAR_FILE
 
-COPY target/${JAR_FILE} eureka-app.jar
+COPY target/*.jar eureka-app.jar
 
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","eureka-app.jar"]
