@@ -9,9 +9,6 @@ management:
     web:
       exposure:
         include: "*"
-        
-logging.file: /home/ansadmin/logs/bookstore-api-gateway-service/bookstore-api-gateway-service.log
-
 ---
 
 spring:
