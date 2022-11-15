@@ -3,12 +3,14 @@ spring:
     name: bookstore-api-gateway-service
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:local}
-logging.file: /home/ansadmin/logs/bookstore-api-gateway-service/bookstore-api-gateway-service.log
+    
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+        
+logging.file: /home/ansadmin/logs/bookstore-api-gateway-service/bookstore-api-gateway-service.log
 
 ---
 
