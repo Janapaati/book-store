@@ -33,7 +33,7 @@ pipeline {
                                 pwd
                                 ls -latr
                                 docker build -t $msname:1.0 .
-                                docker login -u=iampavankalyan -p=PavSiri$143
+                                docker login -u=iampavankalyan -p=Chanikya@123
                                 docker tag $msname:1.0 iampavankalyan/$msname:1.0
                                 docker push iampavankalyan/$msname:1.0
                             '''
