@@ -9,7 +9,7 @@ pipeline {
         }
         stage('scm checkout') {
             steps {
-               git 'https://github.com/rajureddy98/book-store.git' 
+               git 'https://github.com/iampavankalyn/book-store.git' 
             }
         }
         stage('build-FE-docker-image and push'){
@@ -17,9 +17,9 @@ pipeline {
                 sh '''
                     cd bookstore-frontend-react-app
                     docker build -t book-store-ui:1.0 .
-                    docker tag book-store-ui:1.0 rajureddy98/book-store-ui:1.0
-                    docker login -u=rajureddy98 -p=rajureddy98
-                    docker push rajureddy98/book-store-ui:1.0
+                    docker login -u=iampavankalyan -p=Chanikya@123
+                    docker tag book-store-ui:1.0 iampavankalyan/book-store-ui:1.0
+                    docker push iampavankalyan/book-store-ui:1.0
                 '''
             }
         }
