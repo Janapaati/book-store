@@ -1,6 +1,6 @@
 - hosts: all
   become: yes
-  become_user: ansadmin
+  become_user: ubuntu
   tasks:
     - name: Get running processes list from remote host
       ignore_errors: yes
@@ -14,9 +14,9 @@
 
     - name: copying jar file with owner permissions
       copy:
-        src: /var/lib/jenkins/workspace/exam-app-build/backend/{{ msname }}/target/{{ msname }}-0.0.1-SNAPSHOT.jar
-        dest: /home/ansadmin/deployments
-        owner: ansadmin
+        src: /var/lib/jenkins/workspace/Deployment/{{ msname }}/target/{{ msname }}-0.0.1-SNAPSHOT.jar
+        dest: /home/ubuntu/deployments
+        owner: ubuntu
 
     - name: Run jar file
       shell: "nohup java -jar /home/ansadmin/deployments/{{ msname }}-0.0.1-SNAPSHOT.jar &"
