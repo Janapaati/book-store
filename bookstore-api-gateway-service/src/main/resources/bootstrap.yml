@@ -23,7 +23,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://13.126.148.216:8761/
+      defaultZone: http://13.126.148.216:8761/eureka/
     registerWithEureka: true
     enabled: true #eureka discovery is enabled in this profile
   instance:
