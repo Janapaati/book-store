@@ -10,7 +10,7 @@ pipeline {
                 ansiblePlaybook(
                     credentialsId: 'ansible_user',
                     inventory: '/etc/ansible/hosts', 
-                    playbook: '/opt/ansscripts/copy.yaml',
+                    playbook: '/opt/ubuntu/copy.yaml',
                     extraVars   : [
                       msname: env.msname,
             ])
