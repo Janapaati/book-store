@@ -9,7 +9,7 @@ management:
     web:
       exposure:
         include: "*"
-logging.file: /home/ansadmin/logs/bookstore-api-gateway-service/bookstore-api-gateway-service.log
+logging.file: /home/ubuntu/logs/bookstore-api-gateway-service/bookstore-api-gateway-service.log
 ---
 
 spring:
@@ -23,7 +23,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: https://eureka-rajureddy-konga-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/eureka/
+      defaultZone: http://13.126.148.216:8761/
     registerWithEureka: true
     enabled: true #eureka discovery is enabled in this profile
   instance:
