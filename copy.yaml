@@ -19,7 +19,7 @@
         owner: ubuntu
 
     - name: Run jar file
-      shell: "nohup java -jar /home/ansadmin/deployments/{{ msname }}-0.0.1-SNAPSHOT.jar &"
+      shell: "nohup java -jar /home/ubuntu/deployments/{{ msname }}-0.0.1-SNAPSHOT.jar &"
       register: nohup
 
     - debug:
