@@ -12,7 +12,7 @@ pipeline {
         }
         stage('scm checkout') {
             steps {
-               git 'https://github.com/iampavankalyn/book-store.git' 
+               git 'https://github.com/Janapaati/book-store.git' 
             }
         }
         stage('build-ms'){
@@ -33,9 +33,9 @@ pipeline {
                                 pwd
                                 ls -latr
                                 docker build -t $msname:1.0 .
-                                docker login -u=iampavankalyan -p=Chanikya@123
-                                docker tag $msname:1.0 iampavankalyan/$msname:1.0
-                                docker push iampavankalyan/$msname:1.0
+                                docker login -u=662906 -p=Naga@1995
+                                docker tag $msname:1.0 662906/$msname:1.0
+                                docker push 662906/$msname:1.0
                             '''
                         }
                     }
